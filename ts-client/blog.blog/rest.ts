@@ -9,19 +9,9 @@
  * ---------------------------------------------------------------
  */
 
-export type BlogMsgCreatePostResponse = object;
-
-/**
- * Params defines the parameters for the module.
- */
-export type BlogParams = object;
-
-/**
- * QueryParamsResponse is response type for the Query/Params RPC method.
- */
-export interface BlogQueryParamsResponse {
-  /** params holds all the parameters of this module. */
-  params?: BlogParams;
+export interface BlogMsgCreatePostResponse {
+  /** @format uint64 */
+  id?: string;
 }
 
 export interface ProtobufAny {
@@ -227,23 +217,7 @@ export class HttpClient<SecurityDataType = unknown> {
 }
 
 /**
- * @title blog/genesis.proto
+ * @title blog/blog/post.proto
  * @version version not set
  */
-export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
-  /**
-   * No description
-   *
-   * @tags Query
-   * @name QueryParams
-   * @summary Parameters queries the parameters of the module.
-   * @request GET:/blog/blog/params
-   */
-  queryParams = (params: RequestParams = {}) =>
-    this.request<BlogQueryParamsResponse, RpcStatus>({
-      path: `/blog/blog/params`,
-      method: "GET",
-      format: "json",
-      ...params,
-    });
-}
+export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {}

@@ -7,7 +7,7 @@ import { msgTypes } from './registry';
 import { IgniteClient } from "../client"
 import { MissingWalletError } from "../helpers"
 import { Api } from "./rest";
-import { MsgCreatePost } from "./types/blog/tx";
+import { MsgCreatePost } from "./types/blog/blog/tx";
 
 
 export { MsgCreatePost };
