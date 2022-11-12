@@ -11,9 +11,7 @@ const (
 	RouterKey = ModuleName
 
 	// MemStoreKey defines the in-memory store key
-	MemStoreKey  = "mem_blog"
-	PostKey      = "Post/value/"
-	PostCountKey = "Post/count/"
+	MemStoreKey = "mem_blog"
 )
 
 func KeyPrefix(p string) []byte {
