@@ -38,8 +38,6 @@ message QueryPostsRequest {
   cosmos.base.query.v1beta1.PageRequest pagination = 1;
 }
 message QueryPostsResponse {
-  string title = 1;
-  string body = 2;
     // Returning a list of posts
   repeated Post Post = 1;
 
