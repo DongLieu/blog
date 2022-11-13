@@ -2,7 +2,7 @@ syntax = "proto3";
 package blog.blog;
 
 import "gogoproto/gogo.proto";
-import "blog/params.proto";
+import "blog/blog/params.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
 option go_package = "blog/x/blog/types";
